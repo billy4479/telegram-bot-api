@@ -1,0 +1,12 @@
+version: "3"
+services:
+  bot-api:
+    build: .
+    environment:
+      TELEGRAM_API_ID: "${TELEGRAM_API_ID:?missing TELEGRAM_API_ID}"
+      TELEGRAM_API_HASH: "${TELEGRAM_API_HASH:?missing TELEGRAM_API_HASH}"
+      TELEGRAM_LOCAL: "yes"
+      TELEGRAM_VERBOSITY: "1"
+    ports:
+      - 8081:8081
+      - 4479:4479
